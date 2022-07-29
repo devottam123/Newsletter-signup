@@ -16,7 +16,7 @@ app.use(bodyParser.urlencoded({
 }));
 
 app.get("/", function(req, res) {
-  res.sendFile(__dirname + "\\signup.html");
+  res.sendFile(__dirname + "/signup.html");
 })
 
 app.post("/", function(req, res) {
@@ -43,10 +43,10 @@ app.post("/", function(req, res) {
       }
     });
     console.log(response);
-    res.sendFile(__dirname + "\\success.html");
+    res.sendFile(__dirname + "/success.html");
   } catch (err){
     console.log(err.status);
-    res.sendFile(__dirname + "\\failure.html");
+    res.sendFile(__dirname + "/failure.html");
   }
 };
 
